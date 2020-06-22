@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h2>Virtual Scroll</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <cdk-virtual-scroll-viewport itemSize="50" class="list-container list-group">
+
+                <div class="list-group-item" style="color: rgb(68, 65, 65); font-weight: bold;"
+                    *cdkVirtualFor="let people of peoples; let i = index; let counting = count">
+                    {{i}}) {{people.name}}
+                </div>
+
+            </cdk-virtual-scroll-viewport>
+            <div class="row">
+                <div class="mt-5" style="padding-left: 10px;"> 
+                    <button class="btn btn-dark btn-lg" (click)="goToEnd()">Go to end</button>
+                </div>
+                <div class="button-scroll mt-5"> 
+                    <button class="btn btn-dark btn-lg" (click)="toBeginning()">Begenning</button>
+                </div>
+                <div class="button-scroll mt-5"> 
+                    <button class="btn btn-dark btn-lg" (click)="toMiddle()">Middle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

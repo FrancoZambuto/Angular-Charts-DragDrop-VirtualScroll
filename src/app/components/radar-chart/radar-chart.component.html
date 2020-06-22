@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <h2>Radar chart</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="display: block">
+                <canvas baseChart [datasets]="radarChartData" [options]="radarChartOptions" [labels]="radarChartLabels"
+                    [chartType]="radarChartType">
+                </canvas>
+            </div>
+            <div class="col-md-7 mt-5 btn-block">
+                <button class="btn btn-dark btn-lg" style="margin-right: 25px;" (click)="randomize()">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
